@@ -1,0 +1,25 @@
+<div class="example-button-row">
+  </div>
+         <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NOMBRE</th>
+                        <th>AREA</th>
+                        <th>ACCIONES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let location of location" class="text-center">
+                      <td>{{location.id}}</td>
+                      <td>{{location.name}}</td>
+                      <td>{{location.area_m2}}</td>
+                        <td>
+                            <button (click)="EditarLocation(location)" class="btn btn-warning">Editar</button>
+                            <button (click)="DeleteLocation(location)" class="btn btn-danger" style="margin-left: 10mm">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
